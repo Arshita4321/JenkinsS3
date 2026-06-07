@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Test + Coverage') {
             steps {
                 bat 'mvn test'
             }
