@@ -36,5 +36,13 @@ pipeline {
                 junit 'target/surefire-reports/*.xml'
             }
         }
+
+        stage('Publish Coverage') {
+            steps {
+                jacoco execPattern: 'target/jacoco.exec',
+                       classPattern: 'target/classes',
+                       sourcePattern: 'src/main/java'
+            }
+        }
     }
 }
