@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Arshita4321/JenkinsS3.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 bat 'mvn clean compile'
